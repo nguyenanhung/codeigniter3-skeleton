@@ -1,0 +1,47 @@
+{
+    "description": "CodeIgniter v3 Skeleton Application",
+    "name": "nguyenanhung/codeigniter3-skeleton",
+    "type": "project",
+    "license": "Apache-2.0",
+    "homepage": "https://github.com/nguyenanhung/codeigniter3-skeleton",
+    "authors": [
+        {
+            "name": "Nguyen An Hung",
+            "email": "dev@nguyenanhung.com",
+            "homepage": "https://nguyenanhung.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1 || ^8.0",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "ext-mbstring": "*",
+        "nguyenanhung/codeigniter-framework": "^3.1.13",
+        "nguyenanhung/my-debug": "^3.0",
+        "nguyenanhung/requests": "^3.0",
+        "nguyenanhung/basic-firewall": "^2.0",
+        "bear8421/gravatar": "^1.0"
+    },
+    "require-dev": {
+        "nesbot/carbon": "^2",
+        "kint-php/kint": "^4"
+    },
+    "autoload": {
+        "psr-4": {
+            "nguyenanhung\\Support\\": "app/support/"
+        },
+        "classmap": [
+            "app/controllers/",
+            "app/libraries/",
+            "app/models/"
+        ]
+    },
+    "suggest": {
+        "ext-curl": "Needs for support CURL",
+        "ext-json": "Needs for support JSON",
+        "ext-zend opcache": "Needs for support OpCache",
+        "ext-xml": "Needs for support XML",
+        "ext-simplexml": "Needs for support SimpleXML"
+    }
+}

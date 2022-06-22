@@ -1,0 +1,43 @@
+stages:
+    - deploy
+deploy:
+    stage: deploy
+    variables:
+        GIT_STRATEGY: fetch
+    script:
+        - echo "============|| Check Environment ||============"
+        - whoami
+        - pwd
+        - cat /etc/centos-release
+        - php -v
+        - git --version
+        - composer --version
+        - rsync --version
+        - date
+        - echo "============|| Build vendor ||============"
+        - ls -la
+        - composer validate
+        - composer install --no-dev --no-plugins --no-scripts --no-progress --prefer-dist --optimize-autoloader
+        - sudo chown -R gitlab-runner:gitlab-runner vendor/
+        - ls -la
+        - echo "============|| Deploy to production ||============"
+        - whoami
+        - echo $DEPLOY_PATH
+        - pwd
+        - sudo rsync -am --stats app/   "$DEPLOY_PATH/app/"
+        - sudo rsync -am --stats deploy/.prod.database.php   "$DEPLOY_PATH/app/config/database.php"
+        - sudo rsync -am --stats firewall/   "$DEPLOY_PATH/firewall/"
+        - sudo rsync -am --stats nginx/   "$DEPLOY_PATH/nginx/"
+        - sudo rsync -am --stats storage/   "$DEPLOY_PATH/storage/"
+        - sudo rsync -am --stats vendor/   "$DEPLOY_PATH/vendor/"
+        - sudo rsync -am --stats public/   "$DEPLOY_PATH/public/"
+        - sudo rsync -rvh deploy/.prod.index.php   "$DEPLOY_PATH/public/index.php"
+        - sudo rsync -rvh deploy/.prod.server.php    "$DEPLOY_PATH/server.php"
+        - sudo rsync -rvh README.md    "$DEPLOY_PATH/README.md"
+        - sudo chown -R nginx:nginx "$DEPLOY_PATH"
+        - cd $DEPLOY_PATH
+        - sudo php server.php tool clean_cache
+        - sudo php server.php tool flush_opcache
+        - php server.php tool pipelines "My-Services" "deploy"
+    only:
+        - main
