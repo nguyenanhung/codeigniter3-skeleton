@@ -1,6 +1,6 @@
 [![Latest Stable Version](http://poser.pugx.org/nguyenanhung/codeigniter3-skeleton/v)](https://packagist.org/packages/nguyenanhung/codeigniter3-skeleton) [![Total Downloads](http://poser.pugx.org/nguyenanhung/codeigniter3-skeleton/downloads)](https://packagist.org/packages/nguyenanhung/codeigniter3-skeleton) [![Latest Unstable Version](http://poser.pugx.org/nguyenanhung/codeigniter3-skeleton/v/unstable)](https://packagist.org/packages/nguyenanhung/codeigniter3-skeleton) [![License](http://poser.pugx.org/nguyenanhung/codeigniter3-skeleton/license)](https://packagist.org/packages/nguyenanhung/codeigniter3-skeleton) [![PHP Version Require](http://poser.pugx.org/nguyenanhung/codeigniter3-skeleton/require/php)](https://packagist.org/packages/nguyenanhung/codeigniter3-skeleton)
 
-# CodeIgniter4 Framework - Skeleton Application
+# CodeIgniter v3 Framework - Skeleton Application
 
 Bản Skeleton phục vụ triển khai ứng dụng web bằng `CodeIgniter v3 Framework`. Được đóng gói lại thành packages nhằm mục đích triển khai ứng dụng nhanh chóng
 
