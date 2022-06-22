@@ -53,7 +53,7 @@ http://app.codeigniter3.io/
 
 5. Screenshot Page
 
-![https://i.imgur.com/lno3ugO.jpg](https://i.imgur.com/lno3ugO.jpg)
+![https://i.imgur.com/eMddCEJ.jpg](https://i.imgur.com/eMddCEJ.jpg)
 
 ## Liên hệ
 
