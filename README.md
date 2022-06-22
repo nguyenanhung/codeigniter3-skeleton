@@ -42,6 +42,11 @@ docker-compose up -d
 
 ```shell
 sudo vi /etc/hosts
+```
+
+thêm dòng
+
+```shell
 127.0.0.1 app.codeigniter3.io
 ```
 
