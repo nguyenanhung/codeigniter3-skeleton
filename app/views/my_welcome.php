@@ -229,7 +229,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <div class="container">
 
         <div class="logo">
-            <img src="<?= gravatarUrlWithUsername('nguyenanhung', '100', __DIR__ . '/../cache') ?>" width="100" alt="<?= $site_data->site_name ?>">
+            <img src="https://secure.gravatar.com/avatar/463fc33119b4304b6fc0932ac3f262c3?size=100" width="100" alt="<?= $site_data->site_name ?>">
         </div>
 
         <div class="row w text-center">
@@ -273,7 +273,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 </script>
 <script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js'></script>
 <script>
-    $.backstretch("<?= assets_url('images/bg.jpeg') ?>", {speed: 500});
+    $.backstretch("https://spaces.customaz.io/hungna/sites/background/khi-mat-troi-buong-xuong.jpeg", {speed: 500});
 </script>
 </body>
 </html>
