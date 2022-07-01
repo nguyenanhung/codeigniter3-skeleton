@@ -24,6 +24,7 @@
         "bear8421/gravatar": "^1.0"
     },
     "require-dev": {
+        "tramtro/make-some-noise": "^1.0",
         "nesbot/carbon": "^2",
         "kint-php/kint": "^4"
     },
