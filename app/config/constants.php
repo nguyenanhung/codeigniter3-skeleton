@@ -96,3 +96,5 @@ defined('TELEGRAM_JARVIS_BOT') or define('TELEGRAM_JARVIS_BOT', [
         'default_chat_id' => MY_TELEGRAM_ID
     ]
 ]);
+// Elasticsearch
+defined('HOST_ELASTICSEARCH') or define('HOST_ELASTICSEARCH', 'http://127.0.0.1:9200');
