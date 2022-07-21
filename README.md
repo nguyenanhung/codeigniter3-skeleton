@@ -60,13 +60,15 @@ http://app.codeigniter3.io/
 
 ![https://i.imgur.com/eMddCEJ.jpg](https://i.imgur.com/eMddCEJ.jpg)
 
-## Điều khoản sử dụng
+## Điều khoản & Từ chối trách nhiệm
 
-Bộ skeleton này được public dưới dạng open source, bất cứ ai cũng có thể sử dụng open source này cho mục đích của riêng mình dưới giấy phép `GNU GENERAL PUBLIC LICENSE v3 or later`/
+Bộ skeleton này được public dưới dạng open source, bất cứ ai cũng có thể sử dụng open source này cho mục đích của riêng mình dưới giấy phép `GNU GENERAL PUBLIC LICENSE v3 or later`.
 
 Tôi không chịu trách nghiệm về việc bộ source này có thể được sử dụng cho các mục đích riêng biệt nào đó
 
 ## Liên hệ
+
+Nếu có câu hỏi nào liên quan đến việc sử dụng bộ source này, vui lòng liên hệ tới thông tin sau đây
 
 | Name        | Email                | Skype            | Facebook      |
 |-------------|----------------------|------------------|---------------|
