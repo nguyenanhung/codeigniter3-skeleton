@@ -157,6 +157,10 @@ storage/cookie/*
 storage/paygate/*
 storage/logs/*
 storage/tmp/*
+public/storage/tmp/*
+!/public/storage/tmp/.gitkeep
+!/public/storage/tmp/.htaccess
+!/public/storage/tmpindex.html
 !/storage/cache/.gitkeep
 !/storage/cache/.htaccess
 !/storage/cache/index.html
