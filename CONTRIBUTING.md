@@ -1,6 +1,5 @@
 # CONTRIBUTING
 
-
 ## Liên hệ
 
 | Name        | Email                | Skype            | Facebook      |

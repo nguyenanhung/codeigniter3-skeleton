@@ -2,7 +2,7 @@
     "description": "CodeIgniter v3 Skeleton Application",
     "name": "nguyenanhung/codeigniter3-skeleton",
     "type": "project",
-    "license": "Apache-2.0",
+    "license": "GPL-3.0-or-later",
     "homepage": "https://github.com/nguyenanhung/codeigniter3-skeleton",
     "authors": [
         {
@@ -24,6 +24,7 @@
         "bear8421/gravatar": "^1.0"
     },
     "require-dev": {
+        "roave/security-advisories": "dev-latest",
         "tramtro/make-some-noise": "^1.0",
         "nesbot/carbon": "^2",
         "kint-php/kint": "^4"
