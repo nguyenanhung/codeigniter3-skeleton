@@ -37,13 +37,13 @@ class Requests
      */
     public function __construct()
     {
-        $this->DEBUG       = TRUE;
-        $this->logger_path = __DIR__.'/../../storage/logs/Requests/';
+        $this->DEBUG = true;
+        $this->logger_path = __DIR__ . '/../../storage/logs/Requests/';
         $this->logger_file = 'Log-' . date('Y-m-d') . '.log';
-        $this->mono        = [
+        $this->mono = [
             'dateFormat'         => "Y-m-d H:i:s u",
             'outputFormat'       => "[%datetime%] %channel%.%level_name%: %message% %context% %extra%\n",
-            'monoBubble'         => TRUE,
+            'monoBubble'         => true,
             'monoFilePermission' => 0777
         ];
     }
@@ -100,19 +100,19 @@ class Requests
             $getMethod = strtoupper($method);
             // create a log channel
             $formatter = new LineFormatter($this->mono['outputFormat'], $this->mono['dateFormat']);
-            $stream    = new StreamHandler($this->logger_path . 'sendRequest/' . $this->logger_file, Logger::INFO, $this->mono['monoBubble'], $this->mono['monoFilePermission']);
+            $stream = new StreamHandler($this->logger_path . 'sendRequest/' . $this->logger_file, Logger::INFO, $this->mono['monoBubble'], $this->mono['monoFilePermission']);
             $stream->setFormatter($formatter);
             $logger = new Logger('Curl');
             $logger->pushHandler($stream);
-            if ($this->DEBUG === TRUE) {
+            if ($this->DEBUG === true) {
                 $logger->info('||=========== Logger Requests ===========||');
                 $logger->info('Method: ' . $getMethod);
                 $logger->info('Request: ' . $url, $data);
             }
             // Curl
             $curl = new Curl\Curl();
-            $curl->setOpt(CURLOPT_RETURNTRANSFER, TRUE);
-            $curl->setOpt(CURLOPT_SSL_VERIFYPEER, FALSE);
+            $curl->setOpt(CURLOPT_RETURNTRANSFER, true);
+            $curl->setOpt(CURLOPT_SSL_VERIFYPEER, false);
             $curl->setOpt(CURLOPT_ENCODING, "utf-8");
             $curl->setOpt(CURLOPT_MAXREDIRS, 10);
             $curl->setOpt(CURLOPT_TIMEOUT, 300);
@@ -127,7 +127,7 @@ class Requests
             // Close Request
             $curl->close();
             // Log Response
-            if ($this->DEBUG === TRUE) {
+            if ($this->DEBUG === true) {
                 if (is_array($response) || is_object($response)) {
                     $logger->info('Response: ' . json_encode($response));
                 } else {
@@ -151,12 +151,11 @@ class Requests
 
             // Return Response
             return $response;
-        }
-        catch (Exception $e) {
+        } catch (Exception $e) {
             log_message('error', $e->getMessage());
             log_message('error', $e->getTraceAsString());
 
-            return NULL;
+            return null;
         }
     }
 
@@ -177,16 +176,16 @@ class Requests
     public function xmlRequest(string $url = '', string $data = '', int $timeout = 60)
     {
         if (empty($url) || empty($data)) {
-            return NULL;
+            return null;
         }
         try {
             // create a log channel
             $formatter = new LineFormatter($this->mono['outputFormat'], $this->mono['dateFormat']);
-            $stream    = new StreamHandler($this->logger_path . 'xmlRequest/' . $this->logger_file, Logger::INFO, $this->mono['monoBubble'], $this->mono['monoFilePermission']);
+            $stream = new StreamHandler($this->logger_path . 'xmlRequest/' . $this->logger_file, Logger::INFO, $this->mono['monoBubble'], $this->mono['monoFilePermission']);
             $stream->setFormatter($formatter);
             $logger = new Logger('request');
             $logger->pushHandler($stream);
-            if ($this->DEBUG === TRUE) {
+            if ($this->DEBUG === true) {
                 $logger->info('||=========== Logger xmlRequest ===========||');
                 $logger->info('Request URL: ' . $url);
                 $logger->info('Request Data: ' . $data);
@@ -198,22 +197,21 @@ class Requests
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
             curl_setopt($ch, CURLOPT_TIMEOUT, $timeout);
             curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
-            curl_setopt($ch, CURLOPT_FOLLOWLOCATION, TRUE);
+            curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
             curl_setopt($ch, CURLOPT_POST, 1);
             curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
             $page = curl_exec($ch);
             curl_close($ch);
-            if ($this->DEBUG === TRUE) {
+            if ($this->DEBUG === true) {
                 $logger->info('Response from Request: ' . $page);
             }
 
             return $page;
-        }
-        catch (Exception $e) {
+        } catch (Exception $e) {
             log_message('error', $e->getMessage());
             log_message('error', $e->getTraceAsString());
 
-            return NULL;
+            return null;
         }
     }
 

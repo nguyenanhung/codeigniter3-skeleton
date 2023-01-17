@@ -18,6 +18,7 @@ class Test_module extends HungNG_CI_Base_Module
     public function __construct()
     {
         parent::__construct();
+        $this->load->helper('url');
     }
 
     /**
@@ -27,15 +28,16 @@ class Test_module extends HungNG_CI_Base_Module
      * @copyright: 713uk13m <dev@nguyenanhung.com>
      * @time     : 09/10/2021 24:58
      */
-    public function index()
+    public function index(): void
     {
         $response = [
             'code' => StatusCodes::HTTP_OK
         ];
-        $this->output->set_status_header()
-                     ->set_content_type('application/json', 'uft-8')
-                     ->set_output(json_encode($response))
-                     ->_display();
+        $this->output
+            ->set_status_header()
+            ->set_content_type('application/json', 'uft-8')
+            ->set_output(json_encode($response))
+            ->_display();
         exit();
     }
 }

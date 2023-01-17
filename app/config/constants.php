@@ -83,11 +83,9 @@ defined('EXIT_USER_INPUT') or define('EXIT_USER_INPUT', 7); // invalid user inpu
 defined('EXIT_DATABASE') or define('EXIT_DATABASE', 8); // database error
 defined('EXIT__AUTO_MIN') or define('EXIT__AUTO_MIN', 9); // lowest automatically-assigned error code
 defined('EXIT__AUTO_MAX') or define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
-
-
+// Custom Constants
 defined('_PROCESS_TEST_') or define('_PROCESS_TEST_', false);
 defined('CACHE_KEY') or define('CACHE_KEY', 'BEAR_CUTE33_');
-
 defined('MY_TELEGRAM_ID') or define('MY_TELEGRAM_ID', '1234');
 defined('TELEGRAM_JARVIS_BOT') or define('TELEGRAM_JARVIS_BOT', [
     'telegram_messages' => [

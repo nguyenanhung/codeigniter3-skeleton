@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
 /*
 | -------------------------------------------------------------------------
@@ -12,8 +12,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $config = [
     'default' => [
-		'hostname' => '127.0.0.1',
-		'port'     => '11211',
-		'weight'   => '1',
+        'hostname' => '127.0.0.1',
+        'port'     => '11211',
+        'weight'   => '1',
     ],
 ];

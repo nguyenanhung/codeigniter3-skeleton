@@ -9,5 +9,4 @@ defined('BASEPATH') or exit('No direct script access allowed');
  */
 class Elasticsearch extends HungNG_CI_Base_Lib_ElasticSearch
 {
-
 }

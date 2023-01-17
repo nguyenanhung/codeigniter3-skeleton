@@ -30,10 +30,10 @@ class Welcome extends HungNG_CI_Base_Controllers
      */
     public function index(): void
     {
-        $data              = [];
-        $data['author']    = arrayToObject(config_item('site_author'));
+        $data = [];
+        $data['author'] = arrayToObject(config_item('site_author'));
         $data['site_data'] = arrayToObject(config_item('site_data'));
-        $data['tracking']  = arrayToObject(config_item('tracking_code'));
+        $data['tracking'] = arrayToObject(config_item('tracking_code'));
         $this->load->view('my_welcome', $data);
     }
 

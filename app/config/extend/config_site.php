@@ -6,7 +6,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
  * Date: 4/22/18
  * Time: 18:59
  */
-$config['site_author']   = [
+$config['site_author'] = [
     'name'      => 'Hung Nguyen',
     'job'       => [
         'title'       => 'I\'m a software engineer',
@@ -26,7 +26,7 @@ $config['site_author']   = [
     'github'    => 'https://github.com/nguyenanhung',
     'flickr'    => 'https://www.flickr.com/people/nguyenanhung/',
 ];
-$config['site_data']     = [
+$config['site_data'] = [
     'url'         => config_item('base_url'),
     'image'       => config_item('base_url') . 'assets/images/image_src.jpg',
     'site_name'   => 'CodeIgniter v3 Skeleton Application',

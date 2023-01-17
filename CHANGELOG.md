@@ -2,6 +2,12 @@
 
 Change Log được viết theo biểu mẫu tại đây: https://keepachangelog.com/en/1.0.0/
 
+## [1.0.5] - 2023/01/17
+
+### Update
+
+- [x] Bổ sung tính năng
+
 ## [1.0.1]-[1.0.4] - 2022/07/21
 
 ### Added

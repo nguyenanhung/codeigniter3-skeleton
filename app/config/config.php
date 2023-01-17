@@ -24,10 +24,10 @@ defined('BASEPATH') or exit('No direct script access allowed');
 |
 */
 if (ENVIRONMENT === 'production') {
-    $config['base_url']  = 'https://codeigniter3.nguyenanhung.com/';
+    $config['base_url'] = 'https://codeigniter3.nguyenanhung.com/';
     $config['asset_url'] = 'https://codeigniter3.nguyenanhung.com/';
 } else {
-    $config['base_url']  = 'http://app.codeigniter3.io/';
+    $config['base_url'] = 'http://app.codeigniter3.io/';
     $config['asset_url'] = 'http://app.codeigniter3.io/';
 }
 
@@ -189,9 +189,9 @@ $config['permitted_uri_chars'] = 'a-z 0-9~%.:_\-';
 |
 */
 $config['enable_query_strings'] = false;
-$config['controller_trigger']   = 'c';
-$config['function_trigger']     = 'm';
-$config['directory_trigger']    = 'd';
+$config['controller_trigger'] = 'c';
+$config['function_trigger'] = 'm';
+$config['directory_trigger'] = 'd';
 
 /*
 |--------------------------------------------------------------------------
@@ -383,16 +383,16 @@ $config['encryption_key'] = hex2bin('b8bc4dacca2d4e90bd6f5d78a5f7ca4161e00f81349
 | except for 'cookie_prefix' and 'cookie_httponly', which are ignored here.
 |
 */
-$config['sess_driver']      = 'files';
+$config['sess_driver'] = 'files';
 $config['sess_cookie_name'] = sha1('Session_Cookie_Name_HungNG_CodeIgniter_v3_skeleton_tVdOt99RreiaULriXOnxflwCzehBxQNc');
-$config['sess_expiration']  = 7200;
+$config['sess_expiration'] = 7200;
 if (ENVIRONMENT === 'development') {
     $config['sess_save_path'] = __DIR__ . '/../../storage/ci_sessions/';
 } else {
     $config['sess_save_path'] = null;
 }
-$config['sess_match_ip']           = true;
-$config['sess_time_to_update']     = 300;
+$config['sess_match_ip'] = true;
+$config['sess_time_to_update'] = 300;
 $config['sess_regenerate_destroy'] = false;
 
 /*
@@ -410,10 +410,10 @@ $config['sess_regenerate_destroy'] = false;
 |       'cookie_httponly') will also affect sessions.
 |
 */
-$config['cookie_prefix']   = '';
-$config['cookie_domain']   = '';
-$config['cookie_path']     = '/';
-$config['cookie_secure']   = false;
+$config['cookie_prefix'] = '';
+$config['cookie_domain'] = '';
+$config['cookie_path'] = '/';
+$config['cookie_secure'] = false;
 $config['cookie_httponly'] = false;
 
 /*
@@ -458,11 +458,11 @@ $config['global_xss_filtering'] = false;
 | 'csrf_regenerate' = Regenerate token on every submission
 | 'csrf_exclude_uris' = Array of URIs which ignore CSRF checks
 */
-$config['csrf_protection']   = false;
-$config['csrf_token_name']   = sha1(ENVIRONMENT . 'CodeIgniter_v3_skeleton_i0ewkTGviUJ53ZU4vcXn31zamsJOtXns_csrf_test_name');
-$config['csrf_cookie_name']  = sha1(ENVIRONMENT . 'CodeIgniter_v3_skeleton_i0ewkTGviUJ53ZU4vcXn31zamsJOtXns_csrf_cookie_name');
-$config['csrf_expire']       = 7200;
-$config['csrf_regenerate']   = true;
+$config['csrf_protection'] = false;
+$config['csrf_token_name'] = sha1(ENVIRONMENT . 'CodeIgniter_v3_skeleton_i0ewkTGviUJ53ZU4vcXn31zamsJOtXns_csrf_test_name');
+$config['csrf_cookie_name'] = sha1(ENVIRONMENT . 'CodeIgniter_v3_skeleton_i0ewkTGviUJ53ZU4vcXn31zamsJOtXns_csrf_cookie_name');
+$config['csrf_expire'] = 7200;
+$config['csrf_regenerate'] = true;
 $config['csrf_exclude_uris'] = array();
 
 /*
