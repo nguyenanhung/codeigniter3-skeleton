@@ -2,7 +2,9 @@
 
 # CodeIgniter v3 Framework - Skeleton Application
 
-Bản Skeleton phục vụ triển khai ứng dụng web bằng `CodeIgniter v3 Framework`. Được đóng gói lại thành packages nhằm mục đích triển khai ứng dụng nhanh chóng
+Bản Skeleton phục vụ triển khai ứng dụng web bằng `CodeIgniter v3 Framework`. Được đóng gói lại thành packages nhằm mục đích triển khai ứng dụng nhanh chóng.
+
+Source này được đóng gói để hỗ trợ cả mô hình MVC, HMVC với các lớp BaseControllers và BaseModule, dễ triển khai, mở rộng nhanh chóng và mạnh mẽ
 
 ## CHANGELOG
 
