@@ -2,6 +2,12 @@
 
 Change Log được viết theo biểu mẫu tại đây: https://keepachangelog.com/en/1.0.0/
 
+## [1.0.6] - 2023/02/13
+
+### Update
+
+- [x] Upgrade vendor `nguyenanhung/codeigniter-framework` latest version
+
 ## [1.0.5] - 2023/01/17
 
 ### Update

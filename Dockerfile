@@ -46,6 +46,7 @@ RUN docker-php-ext-install intl
 # Install OpCache
 RUN docker-php-ext-install opcache
 COPY ./docker/php/opcache.ini /usr/local/etc/php/conf.d/opcache.ini
+COPY ./docker/php/opcache-default.blacklist /usr/local/etc/php/conf.d/opcache-default.blacklist
 
 # Install GD
 RUN docker-php-ext-configure gd --with-jpeg=/usr/include/ --with-freetype=/usr/include/
