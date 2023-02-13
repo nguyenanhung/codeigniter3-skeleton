@@ -6,7 +6,8 @@ Change Log được viết theo biểu mẫu tại đây: https://keepachangelog
 
 ### Update
 
-- [x] Upgrade vendor `nguyenanhung/codeigniter-framework` latest version
+- [x] Update vendor `nguyenanhung/codeigniter-framework` latest version
+- [x] Update config PHP Zend Opcache
 
 ## [1.0.5] - 2023/01/17
 
