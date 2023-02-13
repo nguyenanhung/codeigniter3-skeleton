@@ -71,6 +71,6 @@ class Welcome extends HungNG_CI_Base_Controllers
 
     public function command(): void
     {
-        ResponseOutput::writeLn("Test CodeIgniter 3 Framework at Time " . date('Y-m-d H:i:s'));
+        ResponseOutput::writeLn("Welcome CodeIgniter 3 Framework at Time " . date('Y-m-d H:i:s'));
     }
 }
