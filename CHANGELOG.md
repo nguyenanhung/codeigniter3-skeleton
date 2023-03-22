@@ -2,6 +2,13 @@
 
 Change Log được viết theo biểu mẫu tại đây: https://keepachangelog.com/en/1.0.0/
 
+## [1.0.7] - 2023/03/22
+
+### Update
+
+- [x] Update vendor `nguyenanhung/codeigniter-framework` latest version
+- [x] Update vendor `nguyenanhung/codeigniter-basic-helper` latest version
+
 ## [1.0.6] - 2023/02/13
 
 ### Update
