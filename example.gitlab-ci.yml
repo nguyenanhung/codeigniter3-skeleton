@@ -1,0 +1,109 @@
+stages:
+    - deploy
+deploy:
+    stage: deploy
+    variables:
+        GIT_STRATEGY: fetch
+    script:
+        - echo "============|| Check Environment ||============"
+        - whoami
+        - pwd
+        - hostname -i
+        - cat /etc/centos-release
+        - php -v
+        - git --version
+        - composer --version
+        - rsync --version
+        - date
+        - echo "============|| Setup Runner ||============"
+        - CI_CD_RUNNER_PATH="/home/gitlab-runner/builds/xxx"
+        - sudo ls -la "$CI_CD_RUNNER_PATH"
+        - echo "============|| Test & Build ||============"
+        - pwd
+        - ls -la
+        - composer --version
+        - composer validate
+        - composer install --no-dev --no-plugins --no-scripts --no-interaction --no-progress --optimize-autoloader
+        - sudo chown -R gitlab-runner:gitlab-runner vendor/
+        - ls -la
+        - echo "============|| Create Released Folder ||============"
+        - whoami
+        - echo $HOME_PATH
+        - echo $PROD_PATH
+        - echo $RELEASE_PATH
+        - DEPLOY_TIME=$(date '+%Y%m%d%H%M%S')
+        - DEPLOY_TIME_HUMAN=$(date '+%Y-%m-%d %H:%M:%S')
+        - echo $DEPLOY_TIME
+        - LAST_RELEASE_FOLDER="$RELEASE_PATH/$DEPLOY_TIME"
+        - echo $LAST_RELEASE_FOLDER
+        - sudo mkdir -p $LAST_RELEASE_FOLDER
+        - pwd
+        - echo "============|| Deploy to Production ||============"
+        - ls -la $HOME_PATH
+        - ls -la $LAST_RELEASE_FOLDER
+        - echo "============> Deploy to HOME_PATH"
+        - sudo rsync -rvh README.md    "$HOME_PATH/README.md"
+        - sudo rsync -am --stats nginx/   "$HOME_PATH/nginx/"
+        - echo "============> Deploy to LAST_RELEASE_FOLDER"
+        - sudo rsync -rvh README.md    "$LAST_RELEASE_FOLDER/README.md"
+        - sudo rsync -am --stats app/   "$LAST_RELEASE_FOLDER/app/"
+        - sudo rsync -am --stats bash/   "$LAST_RELEASE_FOLDER/bash/"
+        - sudo rsync -am --stats firewall/   "$LAST_RELEASE_FOLDER/firewall/"
+        - sudo rsync -am --stats public/    "$LAST_RELEASE_FOLDER/public/"
+        - sudo rsync -am --stats vendor/    "$LAST_RELEASE_FOLDER/vendor/"
+        - sudo rsync -am --stats deploy/root_storage/    "$LAST_RELEASE_FOLDER/storage/"
+        - sudo rsync -am --stats deploy/public_storage/    "$LAST_RELEASE_FOLDER/public/storage/"
+        - sudo rsync -am --stats deploy/app_cache/    "$LAST_RELEASE_FOLDER/app/cache/"
+        - sudo rsync -am --stats deploy/app_logs/    "$LAST_RELEASE_FOLDER/app/logs/"
+        - sudo rsync -am --stats deploy/.prod.config.php    "$LAST_RELEASE_FOLDER/app/config/config.php"
+        - sudo rsync -am --stats deploy/.prod.database.php    "$LAST_RELEASE_FOLDER/app/config/database.php"
+        - sudo rsync -am --stats deploy/.prod.index.php    "$LAST_RELEASE_FOLDER/public/index.php"
+        - sudo rsync -am --stats deploy/.prod.server.php    "$LAST_RELEASE_FOLDER/server.php"
+        - echo "============|| Linking current release ||============"
+        - echo $DEPLOY_TIME
+        - echo $LAST_RELEASE_FOLDER
+        - echo $PROD_PATH
+        - sudo chown -R hungna:hungna "$RELEASE_PATH"
+        - sudo ln -nfs "$LAST_RELEASE_FOLDER" "$PROD_PATH"
+        - echo "============|| Chown & Chmod ||============"
+        - pwd
+        - ls -la
+        - sudo chown -R nginx:nginx "$HOME_PATH"
+        - sudo chown -R nginx:nginx "$RELEASE_PATH"
+        - sudo chown -R nginx:nginx "$PROD_PATH"
+        - sudo chmod -R 0777 "$HOME_PATH/logs"
+        #- sudo chmod -R 0777 "$LAST_RELEASE_FOLDER/storage"
+        #- sudo chmod -R 0777 "$LAST_RELEASE_FOLDER/app/logs"
+        #- sudo chmod -R 0777 "$LAST_RELEASE_FOLDER/app/cache"
+        #- sudo chmod -R 0777 "$LAST_RELEASE_FOLDER/app/files"
+        - sudo chown -R nginx:nginx "$LAST_RELEASE_FOLDER/storage"
+        - sudo chown -R nginx:nginx "$LAST_RELEASE_FOLDER/public/storage"
+        - sudo chown -R nginx:nginx "$LAST_RELEASE_FOLDER/app/logs"
+        - sudo chown -R nginx:nginx "$LAST_RELEASE_FOLDER/app/cache"
+        #- sudo chown -R nginx:nginx "$LAST_RELEASE_FOLDER/app/files"
+        - echo "============|| Reload PHP Service ||============"
+        - sudo nginx -t
+        - sudo systemctl reload php-fpm
+        - echo "============|| Final Check Deployment ||============"
+        - echo $PROD_PATH
+        - pwd
+        - ls -la
+        - pwd
+        - sudo ls -la $HOME_PATH
+        - sudo ls -la $PROD_PATH
+        - sudo ls -la $RELEASE_PATH
+        - sudo ls -la $LAST_RELEASE_FOLDER
+        - sudo sh "$PROD_PATH/bash/script/clean-releases.sh" "$RELEASE_PATH"
+        - echo "============|| Truncate Old Log File ||============"
+        - sudo ls -la "$HOME_PATH/logs"
+        - sudo sh "$PROD_PATH/bash/script/truncate-log.sh" "$HOME_PATH/logs/"
+        - sudo ls -la "$HOME_PATH/logs"
+        - echo "============|| Remove Runner Folder ||============"
+        - sudo ls -la "$CI_CD_RUNNER_PATH"
+        - sudo rm -rf "$CI_CD_RUNNER_PATH"
+        - echo "============|| Notify to Telegram ||============"
+        - cd $PROD_PATH
+        - sudo sh "$PROD_PATH/bash/script/telegram.sh" "CodeIgniter version Skeleton Startapp" "Deployment Success at $DEPLOY_TIME_HUMAN" "https://codeigniter3.nguyenanhung.com/"
+        - echo "============|| DEPLOY FINISHED ||============"
+    only:
+        - main

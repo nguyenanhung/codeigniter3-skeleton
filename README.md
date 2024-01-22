@@ -2,79 +2,85 @@
 
 # CodeIgniter v3 Framework - Skeleton Application
 
-Bản Skeleton phục vụ triển khai ứng dụng web bằng `CodeIgniter v3 Framework`. Được đóng gói lại thành packages nhằm mục
-đích triển khai ứng dụng nhanh chóng.
+The Skeleton version serves the deployment of web applications using the `CodeIgniter v3 Framework`. It has been
+repackaged into packages for the purpose of rapid application deployment.
 
-Source này được đóng gói để hỗ trợ cả mô hình MVC, HMVC với các lớp BaseControllers và BaseModule, dễ triển khai, mở
-rộng nhanh chóng và mạnh mẽ
+This source is packaged to support both the MVC and HMVC models with BaseControllers and BaseModule classes, making it
+easy to deploy, extend quickly, and robust.
 
 ## CHANGELOG
 
-Thông tin Changelog được cập nhật tại https://github.com/nguyenanhung/codeigniter3-skeleton/blob/master/CHANGELOG.md
+The Changelog information is updated at: https://github.com/nguyenanhung/codeigniter3-skeleton/blob/master/CHANGELOG.md
 
 ## Install
 
-Chạy command sau để tiến hành cài đặt ứng dụng `nguyenanhung/codeigniter3-skeleton` và triển khai 1 dự án mới
+Run the following command to install the `nguyenanhung/codeigniter3-skeleton` application and deploy a new
+project:
 
 ```shell
 composer create-project nguyenanhung/codeigniter3-skeleton [my-app-name]
 ```
 
-Thay thế `[my-app-name]` bằng thư mục dự án mới cần triển khai, ví dụ: `my-website`
+Replace `[my-app-name]` with the name of your new project directory, for example, `my-website`:
 
 ```shell
 composer create-project nguyenanhung/codeigniter3-skeleton my-website
 ```
 
-## Start Application
+## Start Application on Docker
 
-Triển khai ứng dụng nhanh với Docker được build sẵn
+Quickly deploy the application with a pre-built Docker container:
 
-1. Build docker
+Build the Docker container:
 
 ```shell
 docker-compose build
 ```
 
-2. Khởi chạy ứng dụng
+Start the application on Docker:
 
 ```shell
 docker-compose up -d
 ```
 
-3. Add url to hosts file
+Add url to hosts file
 
 ```shell
 sudo vi /etc/hosts
 ```
 
-thêm dòng
+Add the following line:
 
 ```shell
 127.0.0.1 app.codeigniter3.io
 ```
 
-4. Open Service in URL
+Open Service in URL
 
 ```shell
 http://app.codeigniter3.io/
 ```
 
-5. Screenshot Page
+## Screenshot Page
 
 ![https://i.imgur.com/eMddCEJ.jpg](https://i.imgur.com/eMddCEJ.jpg)
 
-## Điều khoản & Từ chối trách nhiệm
+## Serverless Version
 
-Bộ skeleton này được public dưới dạng open source, bất cứ ai cũng có thể sử dụng open source này cho mục đích của riêng
-mình dưới giấy phép `GNU GENERAL PUBLIC LICENSE v3 or later`.
+I have released a packaged distribution ready for deployment on Vercel Serverless
+here: https://github.com/nguyenanhung/codeigniter3-vercel-skeleton
 
-Tôi không chịu trách nghiệm về việc bộ source này có thể được sử dụng cho các mục đích riêng biệt nào đó
+## Terms & Disclaimer
 
-## Liên hệ
+This skeleton is publicly available as open source, and anyone can use it for their own purposes under
+the `GNU GENERAL PUBLIC LICENSE v3 or later`.
 
-Nếu có câu hỏi nào liên quan đến việc sử dụng bộ source này, vui lòng liên hệ tới thông tin sau đây
+I am not responsible for any specific use of this source code.
 
-| Name        | Email                | Skype            | Facebook      |
-|-------------|----------------------|------------------|---------------|
-| Hung Nguyen | dev@nguyenanhung.com | nguyenanhung5891 | @nguyenanhung |
+## Contact
+
+If you have any questions related to the use of this source code, please contact me through the following information:
+
+| Name        | Email                | GitHub        | Facebook      |
+|-------------|----------------------|---------------|---------------|
+| Hung Nguyen | dev@nguyenanhung.com | @nguyenanhung | @nguyenanhung |
