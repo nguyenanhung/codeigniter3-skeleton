@@ -2,6 +2,12 @@
 
 Change Log được viết theo biểu mẫu tại đây: https://keepachangelog.com/en/1.0.0/
 
+## [1.1.0] - 2024/01/23
+
+### What's Changed
+
+- [x] Update Static Resource File
+
 ## [1.0.9] - 2024/01/22
 
 ### What's Changed
