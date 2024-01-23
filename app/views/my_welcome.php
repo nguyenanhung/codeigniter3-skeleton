@@ -234,15 +234,12 @@ defined('BASEPATH') or exit('No direct script access allowed');
         <div class="row w text-center">
             <div class="col-lg-6 col-lg-offset-3 text-justify">
                 <h3>Hi there!</h3>
-                <p>I'm Hung and I'm a software engineer in Hanoi, Vietnam.</p>
-                <p>I'm working for a Software development company in Hanoi (Vietnam). I'm familiar with PHP (I'm
-                   experience with Php framework CodeIgniter, Symfony, Laravel, Slim, Phalcon, Silly and Flight), SQL,
-                   Python 3, TypeScript, NodeJS, VAS Service and Team Leader ...</p>
-                <p>Some of the things that I enjoy include: foods, travel, kungfu and photography. If you'd like to chat
-                   about them or anything else, feel free to get in touch with me on
-                    <a href="<?= $author->facebook ?>" target="_blank">facebook</a>,
-                    <a href="mailto:<?= $author->email ?>">email</a> or
-                    <a href="<?= $author->blog ?>" target="_blank">blog</a>.</p>
+                <p>💡 I'm Hung and I'm a engineering manager in Hanoi, Vietnam.</p>
+                <p>💻 Currently, I am working as a Engineering Manager at a software company in Hanoi, Vietnam.</p>
+                <p>💻 My main work is in the fields of Ecommerce Tech, Edutech, Content Management System, DevOps and Project Management</p>
+                <p>🌱 I live in a small town in Hanoi with my families, my wife and my son.</p>
+                <p>💬 am passionated about PHP, Backend, Web, Security, Contribute Open Source and some of the things that</p>
+                <p>Some of the things that I enjoy include: foods, travel, kungfu and photography. If you'd like to chat about them or anything else, feel free to get in touch with me on<a href="<?= $author->facebook ?>" target="_blank">facebook</a>,<a href="mailto:<?= $author->email ?>">email</a> or<a href="<?= $author->blog ?>" target="_blank">blog</a>.</p>
             </div>
         </div>
 

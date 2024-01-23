@@ -6,7 +6,8 @@ if (HUNGNG_FIREWALL_STATUS === true) {
 
     // Setup constants HUNGNG_IP_WHITELIST
     defined('HUNGNG_IP_WHITELIST') or define('HUNGNG_IP_WHITELIST', array(
-        '118.71.97.254', // IP v4 mạng FPT của nhà, IP này cần thường xuyên cập nhật vì đặc thù xài ip động
+        '222.252.35.139', // IP v4 mạng FPT của nhà, IP này cần thường xuyên cập nhật vì đặc thù xài ip động
+        '172.104.35.45', // VPN IP
         '127.0.0.1', // Local IP
     ));
 
