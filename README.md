@@ -77,7 +77,7 @@ http://app.codeigniter3.io/
 
 ## Screenshot Page
 
-![https://i.imgur.com/eMddCEJ.jpg](https://i.imgur.com/eMddCEJ.jpg)
+![https://i.imgur.com/r29Hh5d.png](https://i.imgur.com/r29Hh5d.png)
 
 ## Serverless Version
 

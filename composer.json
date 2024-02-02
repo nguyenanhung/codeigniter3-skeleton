@@ -22,6 +22,11 @@
     "type": "project",
     "license": "GPL-3.0-or-later",
     "homepage": "https://github.com/nguyenanhung/codeigniter3-skeleton",
+    "support": {
+        "issues": "https://github.com/nguyenanhung/codeigniter3-skeleton/issues",
+        "wiki": "https://github.com/nguyenanhung/codeigniter3-skeleton/wiki",
+        "source": "https://github.com/nguyenanhung/codeigniter3-skeleton"
+    },
     "authors": [
         {
             "name": "Nguyen An Hung",
