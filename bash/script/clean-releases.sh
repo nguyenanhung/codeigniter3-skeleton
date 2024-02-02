@@ -5,8 +5,8 @@ echo "==================================================="
 
 # Kiểm tra xem có tham số được truyền vào không
 if [ -z "$1" ]; then
-  echo "Cần chỉ định thư mục releases!"
-  exit 1
+    echo "Cần chỉ định thư mục releases!"
+    exit 1
 fi
 
 parent_folder="$1"
@@ -32,16 +32,16 @@ echo "==================================================="
 
 # Giữ lại 3 thư mục có tên lớn nhất, xoá các thư mục khác
 for ((i = 0; i < ${#sorted_subfolders[@]}; i++)); do
-  subfolder=${sorted_subfolders[i]}
+    subfolder=${sorted_subfolders[i]}
 
-  # Điều chỉnh số bản releases được giữ lại tại đây
-  if [ $i -lt 5 ]; then
-    echo "Giữ lại thư mục: $subfolder"
-  else
-    echo "Xoá thư mục: $subfolder với lệnh (sudo rm -rf: $subfolder)"
-    # Thêm lệnh để xoá thư mục khi bạn đã kiểm tra và chắc chắn rằng script hoạt động đúng
-    sudo rm -rf "$subfolder"
-  fi
+    # Điều chỉnh số bản releases được giữ lại tại đây
+    if [ $i -lt 5 ]; then
+        echo "Giữ lại thư mục: $subfolder"
+    else
+        echo "Xoá thư mục: $subfolder với lệnh (sudo rm -rf: $subfolder)"
+        # Thêm lệnh để xoá thư mục khi bạn đã kiểm tra và chắc chắn rằng script hoạt động đúng
+        sudo rm -rf "$subfolder"
+    fi
 done
 
 echo "==================================================="

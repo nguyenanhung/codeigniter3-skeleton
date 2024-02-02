@@ -1,4 +1,4 @@
-FROM php:7.4-fpm
+FROM php:8.0-fpm
 
 # Copy composer.lock and composer.json
 # COPY composer.lock composer.json /var/www/
@@ -69,8 +69,15 @@ RUN apt-get update && apt-get install -y \
 
 RUN pecl install imagick && docker-php-ext-enable imagick
 
+# Install swoole ext
+#RUN pecl install swoole \
+#    && docker-php-ext-enable swoole
+# Install mongodb ext
+#RUN pecl install mongodb \
+#    && docker-php-ext-enable mongodb
+
 # Install xdebug
-RUN pecl install xdebug && docker-php-ext-enable xdebug
+#RUN pecl install xdebug && docker-php-ext-enable xdebug
 
 # remove not necessary files
 RUN rm -rf /var/lib/apt/lists/*
@@ -100,3 +107,9 @@ USER www
 # Expose port 9000 and start php-fpm server
 EXPOSE 9000
 CMD ["php-fpm"]
+
+# Add a script to monitor changes and update opcache files
+COPY ./docker/php/watcher.sh /watcher.sh
+RUN chmod +x /watcher.sh
+
+CMD ["/watcher.sh"]

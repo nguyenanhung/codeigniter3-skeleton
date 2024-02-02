@@ -156,6 +156,7 @@ storage/ci_sessions/*
 storage/cookie/*
 storage/paygate/*
 storage/logs/*
+storage/requests/*
 storage/tmp/*
 public/storage/tmp/*
 !/public/storage/tmp/.gitkeep
@@ -179,6 +180,9 @@ public/storage/tmp/*
 !/storage/logs/.gitkeep
 !/storage/logs/.htaccess
 !/storage/logs/index.html
+!/storage/requests/.gitkeep
+!/storage/requests/.htaccess
+!/storage/requests/index.html
 !/storage/tmp/.gitkeep
 !/storage/tmp/.htaccess
 !/storage/tmp/index.html

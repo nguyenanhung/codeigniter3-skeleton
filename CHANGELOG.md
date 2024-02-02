@@ -2,6 +2,14 @@
 
 Change Log được viết theo biểu mẫu tại đây: https://keepachangelog.com/en/1.0.0/
 
+## [1.1.1] - 2024/02/02
+
+### What's Changed
+
+- [x] Add Start Application with Native PHP
+- [x] Update Docker PHP 8.0
+- [x] CHMOD Bash Script
+
 ## [1.1.0] - 2024/01/23
 
 ### What's Changed

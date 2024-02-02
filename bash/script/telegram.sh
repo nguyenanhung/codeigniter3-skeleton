@@ -5,8 +5,8 @@ echo "==================================================="
 
 # Kiểm tra xem có đủ 3 tham số không
 if [ $# -ne 3 ]; then
-  echo "Use: $0 <project_name> <message> <url>"
-  exit 1
+    echo "Use: $0 <project_name> <message> <url>"
+    exit 1
 fi
 
 # Lưu các tham số vào biến
@@ -19,8 +19,8 @@ telegram_bot_token="xxx"
 
 # Gửi tin nhắn tới bot Telegram
 curl -s -X POST "https://api.telegram.org/bot$telegram_bot_token/sendMessage" \
-  -d "chat_id=xxx" \
-  -d "text=Project: $project_name%0AMessage: $message%0AURL: $url"
+    -d "chat_id=xxx" \
+    -d "text=Project: $project_name%0AMessage: $message%0AURL: $url"
 
 echo ""
 #echo "Đã gửi thông báo thành công!"

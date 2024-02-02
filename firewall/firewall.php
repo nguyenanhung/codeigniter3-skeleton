@@ -18,5 +18,9 @@ if (HUNGNG_FIREWALL_STATUS === true) {
     // echo 'Your IP ' . getIPAddress() . ' is ' . PHP_EOL;
 
     // Firewall Filter
-    php_basic_firewall_save_log(__DIR__ . '/../logs/accessDenied.log');
+    try {
+        php_basic_firewall_save_log(__DIR__ . '/../logs/accessDenied.log');
+    } catch (Exception $exception) {
+        exit(1);
+    }
 }

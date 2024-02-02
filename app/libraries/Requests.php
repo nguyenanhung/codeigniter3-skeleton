@@ -27,8 +27,8 @@ class Requests extends SimpleRequests
     public function __construct()
     {
         parent::__construct();
-        $this->DEBUG = true;
-        $this->logger_path = __DIR__ . '/../../storage/logs/Requests/';
+        $this->DEBUG = false;
+        $this->logger_path = __DIR__ . '/../../storage/requests/';
         $this->timeout = 60;
         $this->header = array();
     }
