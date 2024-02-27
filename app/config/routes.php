@@ -48,8 +48,13 @@ defined('BASEPATH') or exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'welcome/api';
-$route['index'] = 'welcome/api';
+if (is_cli()) {
+	$route['default_controller'] = 'welcome/command';
+	$route['index'] = 'welcome/api';
+} else {
+	$route['default_controller'] = 'welcome/index';
+	$route['index'] = 'welcome/index';
+}
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = false;
 
