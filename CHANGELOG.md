@@ -2,6 +2,12 @@
 
 Change Log được viết theo biểu mẫu tại đây: https://keepachangelog.com/en/1.0.0/
 
+## [1.1.3] - 2024/02/27
+
+### What's Changed
+
+- [x] Update file permission
+
 ## [1.1.2] - 2024/02/27
 
 ### What's Changed
