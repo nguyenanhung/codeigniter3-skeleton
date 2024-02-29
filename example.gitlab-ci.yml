@@ -23,7 +23,7 @@ deploy:
     - ls -la
     - composer --version
     - composer validate
-    - composer install --no-dev --no-plugins --no-scripts --no-interaction --no-progress --optimize-autoloader
+    - composer install --ansi --no-dev --no-plugins --no-scripts --no-interaction --no-progress --optimize-autoloader
     - sudo chown -R gitlab-runner:gitlab-runner vendor/
     - ls -la
     - echo "============|| Create Released Folder ||============"
