@@ -1,4 +1,5 @@
 <?php
+
 defined('BASEPATH') or exit('No direct script access allowed');
 /*
 | -------------------------------------------------------------------------
@@ -49,12 +50,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 if (is_cli()) {
-	$route['default_controller'] = 'welcome/command';
-	$route['index'] = 'welcome/api';
+    $route['default_controller'] = 'welcome/command';
+    $route['index'] = 'welcome/api';
 } else {
-	$route['default_controller'] = 'welcome/index';
-	$route['index'] = 'welcome/index';
+    $route['default_controller'] = 'welcome/index';
+    $route['index'] = 'welcome/index';
 }
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = false;
-

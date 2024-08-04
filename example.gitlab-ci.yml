@@ -9,7 +9,7 @@ deploy:
     - whoami
     - pwd
     - hostname -i
-    - cat /etc/centos-release
+    - cat /etc/os-release
     - php -v
     - git --version
     - composer --version

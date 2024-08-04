@@ -2,6 +2,12 @@
 
 Change Log được viết theo biểu mẫu tại đây: https://keepachangelog.com/en/1.0.0/
 
+## [1.1.5] - 2024/08/04
+
+### What's Changed
+
+- [x] Update docker-compose.yml
+
 ## [1.1.4] - 2024/04/05
 
 ### What's Changed

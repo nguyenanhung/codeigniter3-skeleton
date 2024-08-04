@@ -3,10 +3,7 @@ services:
 
   # PHP Service
   codeigniter3-app:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    image: digitalocean.com/php
+    image: nguyenanhung/php80-fpm-alpine
     container_name: codeigniter3-app
     restart: unless-stopped
     tty: true
@@ -15,12 +12,11 @@ services:
       SERVICE_TAGS: dev
     working_dir: /var/www
     volumes:
-      - ./:/var/www:cached
+      - ./:/var/www
       - ./docker/php/local.ini:/usr/local/etc/php/conf.d/local.ini
       - ./docker/php/opcache.ini:/usr/local/etc/php/conf.d/opcache.ini
-      - ./docker/php/opcache-default.blacklist:/usr/local/etc/php/conf.d/opcache-default.blacklist
     networks:
-      - default
+      - codeigniter3-app-network
 
   # NGINX Service
   codeigniter3-webserver:
@@ -30,11 +26,12 @@ services:
     tty: true
     ports:
       - "80:80"
+      - "443:443"
     volumes:
-      - ./:/var/www:cached
+      - ./:/var/www
       - ./docker/nginx/conf.d/:/etc/nginx/conf.d/
     networks:
-      - default
+      - codeigniter3-app-network
 
   # MySQL Service
   codeigniter3-mariadb:
@@ -48,15 +45,15 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: hungna
     volumes:
-      - codeigniter3mariadb2data:/var/lib/mysql
+      - hungng-db-data:/var/lib/mysql
       - ./docker/mariadb/mariadb.cnf:/etc/mysql/mariadb.cnf
     networks:
-      - default
+      - hungng-app-network
 
   # PHP MyAdmin Service
-  codeigniter3-phpmyadmin:
+  hungng-phpmyadmin:
     image: phpmyadmin/phpmyadmin:latest
-    container_name: codeigniter3-phpmyadmin
+    container_name: hungng-phpmyadmin
     restart: unless-stopped
     depends_on:
       - codeigniter3-mariadb
@@ -68,7 +65,7 @@ services:
     ports:
       - "3380:80"
     networks:
-      - default
+      - codeigniter3-app-network
 
   # Watcher Service
   watcher:
@@ -81,7 +78,12 @@ services:
     networks:
       - default
 
+#Docker Networks
+networks:
+  codeigniter3-app-network:
+    driver: bridge
+
 #Volumes
 volumes:
-  codeigniter3mariadb2data:
+  codeigniter3-db-data:
     driver: local

@@ -1,4 +1,5 @@
 <?php
+
 defined('HUNGNG_FIREWALL_STATUS') or define('HUNGNG_FIREWALL_STATUS', false);
 
 if (HUNGNG_FIREWALL_STATUS === true) {
