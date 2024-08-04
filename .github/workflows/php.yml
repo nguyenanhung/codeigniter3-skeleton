@@ -28,4 +28,4 @@ jobs:
             -   name: Install dependencies
                 run: composer install --no-dev --no-progress --prefer-dist --optimize-autoloader
             -   name: Testing CodeIgniter3 Skeleton
-                run: php server.php welcome command
+                run: php spark welcome command
