@@ -6,7 +6,8 @@ Change Log được viết theo biểu mẫu tại đây: https://keepachangelog
 
 ### What's Changed
 
-- [x] Update docker-compose.yml
+- [x] Update `docker-compose.yml`
+- [x] Update `.github/php.yml`
 
 ## [1.1.4] - 2024/04/05
 
