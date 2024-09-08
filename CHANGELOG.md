@@ -2,6 +2,19 @@
 
 Change Log được viết theo biểu mẫu tại đây: https://keepachangelog.com/en/1.0.0/
 
+## [1.1.7] - 2024/09/08
+
+### What's Changed
+
+- [x] Add config cache `main_cache_adapter`
+- [x] Add constants `GLOBAL_CACHE_PREFIX`
+
+## [1.1.6] - 2024/08/22
+
+### What's Changed
+
+- [x] Update config `cache_path`
+
 ## [1.1.5] - 2024/08/04
 
 ### What's Changed
