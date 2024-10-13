@@ -2,6 +2,12 @@
 
 Change Log được viết theo biểu mẫu tại đây: https://keepachangelog.com/en/1.0.0/
 
+## [1.1.8] - 2024/10/13
+
+### What's Changed
+
+- [x] Add simple CodeIgniter Command
+
 ## [1.1.7] - 2024/09/08
 
 ### What's Changed
