@@ -1,4 +1,5 @@
 <?php
+
 defined('BASEPATH') or exit('No direct script access allowed');
 /**
  * Created by PhpStorm.
@@ -20,42 +21,44 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <title><?= $site_data->site_name ?></title>
     <meta name="robots" content="noindex">
     <!-- DNS Prefetch -->
-    <link href='//maxcdn.bootstrapcdn.com' rel='dns-prefetch' />
-    <link href='//cdnjs.cloudflare.com' rel='dns-prefetch' />
+    <link href='//maxcdn.bootstrapcdn.com' rel='dns-prefetch'/>
+    <link href='//cdnjs.cloudflare.com' rel='dns-prefetch'/>
 
     <!-- Meta Contents -->
     <meta name="generator" content="<?= $site_data->site_name ?>">
-    <meta name="copyright" content="<?= $site_data->site_name ?>" />
-    <meta name="generator" content="<?= $site_data->site_name ?>" />
-    <meta name="author" content="<?= $author->name ?>" />
+    <meta name="copyright" content="<?= $site_data->site_name ?>"/>
+    <meta name="generator" content="<?= $site_data->site_name ?>"/>
+    <meta name="author" content="<?= $author->name ?>"/>
     <meta name="description" content="<?= $site_data->description ?>">
     <meta name="keywords" content="<?= $site_data->keywords ?>">
 
     <!-- Site Property -->
-    <meta property="fb:app_id" content="<?= $site_data->fb_app_id ?>" />
-    <meta property="fb:admins" content="<?= $site_data->fb_admins ?>" />
-    <meta property="og:locale" content="vi_VN" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="<?= $site_data->site_name ?>" />
-    <meta property="og:description" content="<?= $site_data->description ?>" />
-    <meta property="og:url" content="<?= base_url() ?>" />
-    <meta property="og:image" content="<?= assets_url('images/image_src.jpg') ?>" />
-    <meta property="og:site_name" content="<?= $site_data->site_name ?>" />
-    <meta itemprop="title" content="<?= $site_data->site_name ?>" />
-    <meta itemprop="description" content="<?= $site_data->description ?>" />
-    <meta itemprop="url" content="<?= base_url() ?>" />
-    <meta itemprop="image" content="<?= assets_url('images/image_src.jpg') ?>" />
+    <meta property="fb:app_id" content="<?= $site_data->fb_app_id ?>"/>
+    <meta property="fb:admins" content="<?= $site_data->fb_admins ?>"/>
+    <meta property="og:locale" content="vi_VN"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="<?= $site_data->site_name ?>"/>
+    <meta property="og:description" content="<?= $site_data->description ?>"/>
+    <meta property="og:url" content="<?= base_url() ?>"/>
+    <meta property="og:image" content="<?= assets_url('images/image_src.jpg') ?>"/>
+    <meta property="og:site_name" content="<?= $site_data->site_name ?>"/>
+    <meta itemprop="title" content="<?= $site_data->site_name ?>"/>
+    <meta itemprop="description" content="<?= $site_data->description ?>"/>
+    <meta itemprop="url" content="<?= base_url() ?>"/>
+    <meta itemprop="image" content="<?= assets_url('images/image_src.jpg') ?>"/>
 
     <!-- Favicon -->
-    <?php $this->load->view('favicon'); ?>
+    <?php
+    $this->load->view('favicon'); ?>
 
-    <link rel="bookmark" href="<?= base_url() ?>" />
-    <link rel="canonical" href="<?= base_url() ?>" />
-    <link rel="image_src" href="<?= assets_url('images/image_src.jpg') ?>" />
+    <link rel="bookmark" href="<?= base_url() ?>"/>
+    <link rel="canonical" href="<?= base_url() ?>"/>
+    <link rel="image_src" href="<?= assets_url('images/image_src.jpg') ?>"/>
 
     <!-- Resource -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
-    <link href='//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css' rel='stylesheet' type='text/css'>
+    <link href='//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css' rel='stylesheet'
+          type='text/css'>
     <style>
         body {
             background-color: #F2F2F2;
@@ -218,17 +221,22 @@ defined('BASEPATH') or exit('No direct script access allowed');
 </head>
 <body>
 <div id="clouds">
-    <img class="cloud1" src="https://hungna.github.io/assets/themes/clouds/assets/clouds/cloud-1.png" alt="Cloud-1" />
-    <img class="cloud2" src="https://hungna.github.io/assets/themes/clouds/assets/clouds/cloud-2.png" alt="Cloud-2" />
-    <img class="cloud3" src="https://hungna.github.io/assets/themes/clouds/assets/clouds/cloud-3.png" alt="Cloud-3" />
-    <img class="cloud4" src="https://hungna.github.io/assets/themes/clouds/assets/clouds/cloud-4.png" alt="Cloud-4" />
+    <img class="cloud1" src="https://i3.wp.com/hungna.github.io/assets/themes/clouds/assets/clouds/cloud-1.png"
+         alt="Cloud-1"/>
+    <img class="cloud2" src="https://i3.wp.com/hungna.github.io/assets/themes/clouds/assets/clouds/cloud-2.png"
+         alt="Cloud-2"/>
+    <img class="cloud3" src="https://i3.wp.com/hungna.github.io/assets/themes/clouds/assets/clouds/cloud-3.png"
+         alt="Cloud-3"/>
+    <img class="cloud4" src="https://i3.wp.com/hungna.github.io/assets/themes/clouds/assets/clouds/cloud-4.png"
+         alt="Cloud-4"/>
 </div>
 
 <div class="site_content">
     <div class="container">
 
         <div class="logo">
-            <img src="https://secure.gravatar.com/avatar/463fc33119b4304b6fc0932ac3f262c3?size=100" width="100" alt="<?= $site_data->site_name ?>">
+            <img src="https://secure.gravatar.com/avatar/463fc33119b4304b6fc0932ac3f262c3?size=100" width="100"
+                 alt="<?= $site_data->site_name ?>">
         </div>
 
         <div class="row w text-center">
@@ -236,22 +244,35 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 <h3>Hi there!</h3>
                 <p>💡 I'm Hung and I'm a engineering manager in Hanoi, Vietnam.</p>
                 <p>💻 Currently, I am working as a Engineering Manager at a software company in Hanoi, Vietnam.</p>
-                <p>💻 My main work is in the fields of Ecommerce Tech, EdTech, Content Management System, DevOps and Project Management</p>
+                <p>💻 My main work is in the fields of Ecommerce Tech, EdTech, Content Management System, DevOps and
+                    Project Management</p>
                 <p>🌱 I live in a small town in Hanoi with my families, my wife and my son.</p>
-                <p>💬 am passionated about PHP, Backend, Web, Security, Contribute Open Source and some of the things that</p>
-                <p>Some of the things that I enjoy include: foods, travel, kungfu and photography. If you'd like to chat about them or anything else, feel free to get in touch with me on<a href="<?= $author->facebook ?>" target="_blank">facebook</a>,<a href="mailto:<?= $author->email ?>">email</a> or<a href="<?= $author->blog ?>" target="_blank">blog</a>.</p>
+                <p>💬 am passionated about PHP, Backend, Web, Security, Contribute Open Source and some of the things
+                    that</p>
+                <p>Some of the things that I enjoy include: foods, travel, kungfu and photography. If you'd like to chat
+                    about them or anything else, feel free to get in touch with me on<a href="<?= $author->facebook ?>"
+                                                                                        target="_blank">facebook</a>,<a
+                            href="mailto:<?= $author->email ?>">email</a> or<a href="<?= $author->blog ?>"
+                                                                               target="_blank">blog</a>.</p>
             </div>
         </div>
 
         <div class="row text-center">
             <div class="col-lg-8 col-lg-offset-2 w tooltip-demo">
-                <a data-toggle="tooltip" title="Facebook" href="<?= $author->facebook ?>" target="_blank"><i class="fa fa-facebook"></i></a>
-                <a data-toggle="tooltip" title="Twitter" href="<?= $author->twitter ?>" target="_blank"><i class="fa fa-twitter"></i></a>
-                <a data-toggle="tooltip" title="Instagram" href="<?= $author->instagram ?>" target="_blank"><i class="fa fa-instagram"></i></a>
-                <a data-toggle="tooltip" title="Flickr" href="<?= $author->flickr ?>" target="_blank"><i class="fa fa-flickr"></i></a>
-                <a data-toggle="tooltip" title="Github" href="<?= $author->github ?>" target="_blank"><i class="fa fa-github"></i></a>
-                <a data-toggle="tooltip" title="Blogging" href="<?= $author->blog ?>" target="_blank"><i class="fa fa-beer"></i></a>
-                <a data-toggle="tooltip" title="Email Me!" href="mailto:<?= $author->email ?>" target="_blank"><i class="fa fa-envelope"></i></a>
+                <a data-toggle="tooltip" title="Facebook" href="<?= $author->facebook ?>" target="_blank"><i
+                            class="fa fa-facebook"></i></a>
+                <a data-toggle="tooltip" title="Twitter" href="<?= $author->twitter ?>" target="_blank"><i
+                            class="fa fa-twitter"></i></a>
+                <a data-toggle="tooltip" title="Instagram" href="<?= $author->instagram ?>" target="_blank"><i
+                            class="fa fa-instagram"></i></a>
+                <a data-toggle="tooltip" title="Flickr" href="<?= $author->flickr ?>" target="_blank"><i
+                            class="fa fa-flickr"></i></a>
+                <a data-toggle="tooltip" title="Github" href="<?= $author->github ?>" target="_blank"><i
+                            class="fa fa-github"></i></a>
+                <a data-toggle="tooltip" title="Blogging" href="<?= $author->blog ?>" target="_blank"><i
+                            class="fa fa-beer"></i></a>
+                <a data-toggle="tooltip" title="Email Me!" href="mailto:<?= $author->email ?>" target="_blank"><i
+                            class="fa fa-envelope"></i></a>
             </div>
         </div>
 
@@ -267,9 +288,10 @@ defined('BASEPATH') or exit('No direct script access allowed');
         container: "body"
     })
 </script>
-<script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js'></script>
+<script type='text/javascript'
+        src='//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js'></script>
 <script>
-    $.backstretch("https://hungna.github.io/assets/images/khi-mat-troi-buong-xuong.jpeg", {speed: 500});
+    $.backstretch("https://i3.wp.com/hungna.github.io/assets/images/khi-mat-troi-buong-xuong.jpeg", {speed: 500});
 </script>
 </body>
 </html>
